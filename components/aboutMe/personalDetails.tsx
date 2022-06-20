@@ -15,7 +15,7 @@ const PersonalDetails = (props: Props) => {
           Birthdate
           </div>
           <div>
-          3 octนber 1996
+          3 october 1996
           </div>
         </li>
         <li className='flex gap-2'>
