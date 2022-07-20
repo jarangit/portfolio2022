@@ -39,7 +39,7 @@ const Banner = (props: Props) => {
               border rounded-full w-10 h-10 p-2 cursor-pointer border-black`}
               />
             </a>
-            <a href="tel:+66882266023">
+            <a href="tel:+66982846339">
               <AiOutlinePhone
                 size={30}
                 color="black"
