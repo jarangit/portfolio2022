@@ -23,11 +23,11 @@ const PersonalDetails = (props: Props) => {
           Phone
           </div>
           <div>
-            0882266023
+            098-284-6339
           </div>
         </li>
         <li className='flex gap-2'>
-          <div className='min-w-[100px] text-red-400 font-bold'>
+          <div className='min-w-[100px]  text-red-400 font-bold'>
           Email
           </div>
           <div>
