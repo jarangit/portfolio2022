@@ -11,12 +11,12 @@ const Banner = (props: Props) => {
   return (
     <div>
       <div className=' container flex items-center justify-center flex-col'>
-        <div className={`border-[4px] mainShadow rounded-full w-[250px] h-[250px] relative`}>
+        <div className={`border-[4px] mainShadow rounded-full w-[250px] h-[250px] relative overflow-hidden`}>
           <Image
             src={`/img/profile.png`}
             alt="profile"
             layout='fill'
-            objectFit='contain'
+            objectFit='cover'
 
           />
         </div>

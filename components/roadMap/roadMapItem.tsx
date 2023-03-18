@@ -9,7 +9,6 @@ type Props = {
 }
 
 const RoadMapItem = ({ years, title, detail, descripttion }: Props) => {
-  console.log(descripttion)
   const [open, setOpen] = useState(false)
   return (
     <div className="p-3 bg-blue-100 rounded-xl mainShadow">
