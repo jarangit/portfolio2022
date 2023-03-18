@@ -20,6 +20,7 @@ const ListRoadMap = ({ title, data }: Props) => {
                   years={item.years}
                   title={item.title}
                   detail={item.detail}
+                  descripttion={item.description}
                 />
               </React.Fragment>
             ))

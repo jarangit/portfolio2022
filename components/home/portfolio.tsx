@@ -46,7 +46,7 @@ const dataProjects = [
     img: "/img/project/p10.png",
   },
   {
-    url: "https://app.netlify.com/sites/mystifying-ptolemy-83c3f3/overview",
+    url: "https://mystifying-ptolemy-83c3f3.netlify.app/",
     img: "/img/project/p11.png",
   },
   {
@@ -64,15 +64,15 @@ const Portfolio = (props: Props) => {
         </div>
         <div className={`grid grid-cols-2 md:grid-cols-3 gap-5 mt-10`}>
           {dataProjects.map((item: any, key: any) => (
-            <Link href={item.url} key = {key}>
-              <div key={key} className="mainShadow w-[100%] h-[150px] lg:h-[250px] relative rounded-xl overflow-hidden">
+            <Link href={item.url} key = {key} target="_blank">
+              <a key={key}  target="_blank" className="mainShadow w-[100%] h-[150px] lg:h-[250px] relative rounded-xl overflow-hidden">
                 <Image
                   src={item.img}
                   alt=""
                   layout='fill'
                   objectFit='cover'
                 />
-              </div>
+              </a>
             </Link>
           ))}
         </div>

@@ -4,6 +4,7 @@ import { CgMail } from 'react-icons/cg'
 import { AiOutlinePhone, AiOutlineInstagram } from 'react-icons/ai'
 import { FiTwitter } from 'react-icons/fi'
 import Link from 'next/link'
+import { FaLine } from 'react-icons/fa'
 type Props = {}
 
 const Banner = (props: Props) => {
@@ -59,6 +60,15 @@ const Banner = (props: Props) => {
             </a>
             <a href="https://twitter.com/JDonchaaim" target={"_blank"} rel="noopener noreferrer">
               <FiTwitter
+                size={30}
+                color="black"
+                className={`
+              hoverLink
+              border rounded-full w-10 h-10 p-2 cursor-pointer border-black`}
+              />
+            </a>
+            <a href="https://line.me/ti/p/Z48derPbze" target={"_blank"} rel="noopener noreferrer">
+              <FaLine
                 size={30}
                 color="black"
                 className={`
