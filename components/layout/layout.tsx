@@ -8,9 +8,9 @@ type Props = {
 
 const Layout = ({children}: Props) => {
   return (
-    <div>
+    <div className="min-h-screen bg-white text-slate-900 antialiased">
       <NavMenu/>
-      <div>{children}</div>
+      <main>{children}</main>
       <Footer/>
     </div>
   )

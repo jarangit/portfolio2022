@@ -1,48 +1,26 @@
 import React from 'react'
+import { personalDetails } from '../../data/experience'
 
 type Props = {}
 
 const PersonalDetails = (props: Props) => {
   return (
-    <div>
-      <div className="text-2xl font-bold">
+    <div className="cardBorder rounded-xl bg-white p-6">
+      <div className="text-lg font-extrabold text-slate-900">
         Personal Details
       </div>
 
-      <ul className="mt-3 flex flex-col gap-2">
-        <li className='flex gap-2'>
-          <div className='min-w-[100px] text-red-400 font-bold'>
-          Birthdate
-          </div>
-          <div>
-          3 october 1996
-          </div>
-        </li>
-        <li className='flex gap-2'>
-          <div className='min-w-[100px] text-red-400 font-bold'>
-          Phone
-          </div>
-          <div>
-            098-284-6339
-          </div>
-        </li>
-        <li className='flex gap-2'>
-          <div className='min-w-[100px]  text-red-400 font-bold'>
-          Email
-          </div>
-          <div>
-            jaran.dch@gmail.com
-          </div>
-        </li>
-        <li className='flex gap-2'>
-          <div className='min-w-[100px] text-red-400 font-bold'>
-          Job Status
-          </div>
-          <div>
-            Full time
-          </div>
-        </li>
-      
+      <ul className="mt-4 flex flex-col gap-3 text-sm">
+        {personalDetails.map((item) => (
+          <li key={item.label} className="flex gap-3">
+            <div className="min-w-[100px] text-blue-600 font-bold">
+              {item.label}
+            </div>
+            <div className="text-slate-700">
+              {item.value}
+            </div>
+          </li>
+        ))}
       </ul>
     </div>
   )

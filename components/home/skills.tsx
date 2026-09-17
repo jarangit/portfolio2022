@@ -1,107 +1,44 @@
 import Image from 'next/image'
 import React from 'react'
-import ProgressBarSkills from '../progress/skills'
+import { skills } from '../../data/skills'
 
 type Props = {}
-const dataIconsSkills = [
-  {
-    text: "Html",
-    img: "/img/html.png",
-  },
-  {
-    text: "Css",
-    img: "/img/css.webp",
-  },
-  {
-    text: "JavaScript",
-    img: "/img/js.png",
-  },
-  {
-    text: "TypeScript",
-    img: "/img/ts.png",
-  },
-  {
-    text: "React",
-    img: "/img/react.png",
-  },
-  {
-    text: "Next js",
-    img: "/img/next.svg",
-  },
-  {
-    text: "Gatsby js",
-    img: "/img/gb.png",
-  },
-  {
-    text: "Material UI",
-    img: "/img/mt.png",
-  },
-  {
-    text: "Styles components",
-    img: "/img/sc.png",
-  },
-  {
-    text: "Tailwind Css",
-    img: "/img/tailwind.png",
-  },
-  {
-    text: "Node js",
-    img: "/img/node.png",
-  },
-  {
-    text: "Redux",
-    img: "/img/redux.png",
-  },
 
-]
 const Skills = (props: Props) => {
   return (
-    <div className='container'>
-      <div className='py-20'>
-        <div className={`text-center text-2xl font-bold`}>
-          Skills
+    <section className="container">
+      <div className="py-12 md:py-16">
+        <div>
+          <h2 className="sectionTitle">My Skills</h2>
+          <p className="sectionSubtitle text-sm">
+            Tools and technologies I use to build modern web applications.
+          </p>
         </div>
 
-        <div className={`grid grid-cols-1 gap-5 md:grid-cols-2 mt-10`}>
-          <div className="grid grid-cols-4 md:grid-cols-6 gap-5 text-xs">
-            {dataIconsSkills.map((item: any, key: any) => (
-              <div className="text-center text-gray-500" key = {key}>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-6">
+          {skills.map((item) => (
+            <div
+              key={item.name}
+              className="cardBorder rounded-xl bg-white px-4 py-4 flex items-center gap-3 hover:shadow-md transition-shadow"
+            >
+              <div className="shrink-0 w-11 h-11 relative grid place-items-center rounded-lg bg-slate-50 border border-slate-100 overflow-hidden">
                 <Image
-                  src={item.img}
-                  alt=''
-                  width={50}
-                  height={50}
+                  src={item.icon}
+                  alt={item.name}
+                  width={32}
+                  height={32}
+                  objectFit="contain"
                 />
-                <div>{item.text}</div>
               </div>
-            ))}
-          </div>
-          <div>
-            <ProgressBarSkills
-              text={"HTML / CSS / JS"}
-              value={40}
-              years={4}
-            />
-            <ProgressBarSkills
-              text={"React / Next js"}
-              value={30}
-              years={3}
-            />
-            <ProgressBarSkills
-              text={"Redux / TypeScript / Gatsby"}
-              value={10}
-              years={1}
-            />
-            <ProgressBarSkills
-              text={"Tailwind / Material UI / Styles Components"}
-              value={10}
-              years={1}
-            />
-
-          </div>
+              <div className="min-w-0">
+                <div className="text-sm font-bold text-slate-900 truncate">{item.name}</div>
+                <div className="text-xs text-slate-500">{item.experience}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 

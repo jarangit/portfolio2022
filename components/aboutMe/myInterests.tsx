@@ -6,48 +6,31 @@ import {GrBitcoin} from 'react-icons/gr'
 import {FaGuitar, FaHeartbeat, FaGamepad} from 'react-icons/fa'
 type Props = {}
 
+const interests = [
+  { icon: <BiFootball size={22} />, label: 'Football' },
+  { icon: <BsFillMusicPlayerFill size={22} />, label: 'Music' },
+  { icon: <FaGuitar size={22} />, label: 'Guitar' },
+  { icon: <BiNetworkChart size={22} />, label: 'Technology' },
+  { icon: <FaHeartbeat size={22} />, label: 'Heart' },
+  { icon: <FaGamepad size={22} />, label: 'Game' },
+  { icon: <HiPhotograph size={22} />, label: 'Photograph' },
+  { icon: <GrBitcoin size={22} />, label: 'Crypto' },
+]
+
 const MyInterests = (props: Props) => {
   return (
-    <div>
-      <div>
-        <div className="text-2xl font-bold">
-          My Interests
-        </div>
+    <div className="cardBorder rounded-xl bg-white p-6">
+      <div className="text-lg font-extrabold text-slate-900">
+        My Interests
+      </div>
 
-        <div className='mt-3 grid  grid-cols-2 md:grid-cols-4 gap-3 '>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <BiFootball size = {30}/>
-            <div>Football</div>
+      <div className='mt-4 grid grid-cols-2 sm:grid-cols-4 gap-3'>
+        {interests.map((item) => (
+          <div key={item.label} className='border border-slate-100 rounded-xl w-full p-3 flex flex-col items-center gap-1.5 text-slate-600 bg-slate-50/60'>
+            {item.icon}
+            <div className="text-xs font-medium">{item.label}</div>
           </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <BsFillMusicPlayerFill size = {30}/>
-            <div>Music</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <FaGuitar size = {30}/>
-            <div>Guitar</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <BiNetworkChart size = {30}/>
-            <div>Technology</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <FaHeartbeat size = {30}/>
-            <div>Heart</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <FaGamepad size = {30}/>
-            <div>Game</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <HiPhotograph size = {30}/>
-            <div>Photograph</div>
-          </div>
-          <div className='mainShadow  w-full p-3 rounded-xl flex flex-col items-center drop-shadow-2xl'>
-            <GrBitcoin size = {30}/>
-            <div>Crypto</div>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   )
